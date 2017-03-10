@@ -1,0 +1,47 @@
+<!DOCTYPE>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <link href="https://unpkg.com/botframework-webchat/botchat.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+    }
+    
+    iframe {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    button {
+      background-color: #3A96DD;
+      border-radius: 10px;
+      border: 0px;
+      height: 100px;
+      width: 300px;
+      font-size: 60px;
+      color: white;
+      margin: 100px auto;
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id='container'>
+    <div id="bot" />
+    <button>受付</button>
+    <iframe src='https://webchat.botframework.com/embed/booking0310?s=7AK_Em4tL0I.cwA.WDQ.ZHFGDP39LnB3Hqpd3_WaSy-dpCFmSY9NjL8-Rp4Zh9E' frameborder="0"></iframe>
+  </div>
+  <script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+  <script>
+    $("button").click(res => {
+      $("iframe").css('display', 'block');
+      $("button").css('display', 'none');
+    });
+  </script>
+</body>
